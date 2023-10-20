@@ -27,20 +27,26 @@ return require('packer').startup(function(use)
   use {
 	  'VonHeikemen/lsp-zero.nvim',
 	  branch = 'v3.x',
-	  requires = {
+    requires = {
+      -- LSP Support
+      {'neovim/nvim-lspconfig'},
+      {'williamboman/mason.nvim'},
+      {'williamboman/mason-lspconfig.nvim'},
 
-		  -- LSP Support
-		  {'neovim/nvim-lspconfig'},
-		  {'williamboman/mason.nvim'},
-		  {'williamboman/mason-lspconfig.nvim'},
-		  -- Autocompletion
-      {'onsails/lspkind-nvim'},
-      {'L3MON4D3/LuaSnip'},
-      {'hrsh7th/cmp-nvim-lsp'},
+      -- Autocompletion
+      {'hrsh7th/nvim-cmp'},
       {'hrsh7th/cmp-buffer'},
-		  {'hrsh7th/nvim-cmp'},
-	  }
+      {'hrsh7th/cmp-path'},
+      {'saadparwaiz1/cmp_luasnip'},
+      {'hrsh7th/cmp-nvim-lsp'},
+      {'hrsh7th/cmp-nvim-lua'},
+
+      -- Snippets
+      {'L3MON4D3/LuaSnip'},
+      {'rafamadriz/friendly-snippets'},
+    }
   }
+
 
   --primeagen's harpoon
   use('theprimeagen/harpoon')
