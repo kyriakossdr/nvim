@@ -1,9 +1,9 @@
 # Neovim Setup
 
-*A combination of [Primeagen's nvim set-up](https://github.com/ThePrimeagen/init.lua) and [Takuya Matsuyama's](https://blog.inkdrop.app/my-neovim-setup-for-react-typescript-tailwind-css-etc-in-2022-a7405862c9a4)
-nvim with some adjustments.*
+**A combination of [Primeagen's nvim set-up](https://github.com/ThePrimeagen/init.lua) and [Takuya Matsuyama's](https://blog.inkdrop.app/my-neovim-setup-for-react-typescript-tailwind-css-etc-in-2022-a7405862c9a4)
+nvim with some adjustments.**
 
-**Uses**
+Uses
 - packer (plugin manager)
 - telescope (fuzzyfinder)
 - rose-pine (colorscheme)
