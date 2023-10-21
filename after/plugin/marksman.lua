@@ -1,0 +1,1 @@
+require('marksman').setup('marksman')
