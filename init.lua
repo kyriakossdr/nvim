@@ -5,7 +5,8 @@ require("telescope").setup{
       "node_modules",
       "venv",
       ".git",
-      ".vscode"
+      ".vscode",
+      "__pycache__"
     }
   }
 }
