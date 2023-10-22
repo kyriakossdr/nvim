@@ -124,6 +124,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\kiria\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["markdown-preview.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\kiria\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\markdown-preview.nvim",
+    url = "https://github.com/iamcco/markdown-preview.nvim"
+  },
   ["mason-lspconfig.nvim"] = {
     loaded = true,
     path = "C:\\Users\\kiria\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\mason-lspconfig.nvim",
@@ -148,12 +153,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\kiria\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
-  },
-  ["nvim-marksman"] = {
-    loaded = true,
-    needs_bufread = false,
-    path = "C:\\Users\\kiria\\AppData\\Local\\nvim-data\\site\\pack\\packer\\opt\\nvim-marksman",
-    url = "https://github.com/svermeulen/nvim-marksman"
   },
   ["nvim-treesitter"] = {
     loaded = true,
@@ -189,13 +188,6 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Setup for: nvim-marksman
-time([[Setup for nvim-marksman]], true)
-try_loadstring("\27LJ\2\n7\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\24UpdateRemotePlugins\bcmd\bvim\0", "setup", "nvim-marksman")
-time([[Setup for nvim-marksman]], false)
-time([[packadd for nvim-marksman]], true)
-vim.cmd [[packadd nvim-marksman]]
-time([[packadd for nvim-marksman]], false)
 -- Config for: rose-pine
 time([[Config for rose-pine]], true)
 try_loadstring("\27LJ\2\n9\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\26colorscheme rose-pine\bcmd\bvim\0", "config", "rose-pine")

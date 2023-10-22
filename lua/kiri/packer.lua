@@ -20,8 +20,11 @@ return require('packer').startup(function(use)
 	  end
   })
 
+  --markdown preview
+  use {'iamcco/markdown-preview.nvim'}
+
   --treesitter
-  use( 'nvim-treesitter/nvim-treesitter', {run= ':TSUpdate'})
+  use( 'nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
 
   --lsp
   use {
