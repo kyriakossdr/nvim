@@ -6,7 +6,7 @@ nvim with some adjustments.**
 - packer (plugin manager)
 - telescope (fuzzyfinder)
 - treesitter (syntax highlighting)
-- lsp_zero (wrapper for lsp and cmp)
+-lsp_zero (wrapper for lsp and cmp)
 - harpoon (to jump between files quickly)
 
 More in the `lua/kiri/packer.lua`
