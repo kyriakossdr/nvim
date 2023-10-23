@@ -12,13 +12,7 @@ return require('packer').startup(function(use)
   }
 
   --colorscheme
-  use({
-	  'rose-pine/neovim',
-	  as = 'rose-pine',
-	  config = function()
-		  vim.cmd('colorscheme rose-pine')
-	  end
-  })
+  use('Shatur/neovim-ayu')
 
   --markdown preview
   use {'iamcco/markdown-preview.nvim'}
@@ -28,8 +22,7 @@ return require('packer').startup(function(use)
 
   --lsp
   use {
-	  'VonHeikemen/lsp-zero.nvim',
-	  branch = 'v3.x',
+	  'VonHeikemen/lsp-zero.nvim',  branch = 'v3.x',
     requires = {
       -- LSP Support
       {'neovim/nvim-lspconfig'},
@@ -49,7 +42,6 @@ return require('packer').startup(function(use)
       {'rafamadriz/friendly-snippets'},
     }
   }
-
 
   --primeagen's harpoon
   use('theprimeagen/harpoon')

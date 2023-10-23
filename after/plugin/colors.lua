@@ -1,13 +1,22 @@
-require('rose-pine').setup({
-    disable_background = true
+require'ayu'.setup({
+  mirage = false,
+  overrides = {
+    Normal = { bg = "None" },
+    ColorColumn = { bg = "None" },
+    SignColumn = { bg = "None" },
+    Folded = { bg = "None" },
+    FoldColumn = { bg = "None" },
+    CursorLine = { bg = "None" },
+    CursorColumn = { bg = "None" },
+    WhichKeyFloat = { bg = "None" },
+    VertSplit = { bg = "None" },
+  },
 })
 
-function Pencils(color)
-	color = color or "rose-pine"
-	vim.cmd.colorscheme(color)
-
-	vim.api.nvim_set_hl(0, "Normal", { bg= "none" })
-	vim.api.nvim_set_hl(0, "NormalFloat", { bg= "none" })
+function Pencils()
+  -- Set the color scheme to 'ayu'
+  vim.cmd('colorscheme ayu')
 end
+
 
 Pencils()

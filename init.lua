@@ -1,12 +1,12 @@
 require("kiri")
-require("telescope").setup{
-  defaults = {
-    file_ignore_patterns ={
-      "node_modules",
-      "venv",
-      ".git",
-      ".vscode",
-      "__pycache__"
-    }
-  }
-}
+--require("telescope").setup{
+--defaults = {
+    --file_ignore_patterns ={
+     -- "node_modules",
+      --"venv",
+      --".git",
+      --".vscode",
+      --"__pycache__"
+    --}
+  --}
+--}
