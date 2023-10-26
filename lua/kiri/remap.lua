@@ -6,6 +6,3 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 --yank to the system clipboard
 vim.keymap.set("v", "<leader>y", "\"+y")
-
---toggle wrap
-vim.keymap.set("n", "<leader>z", "[[:lua ToggleWrap()<CR>]]")
