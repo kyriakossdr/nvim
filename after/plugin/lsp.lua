@@ -21,7 +21,7 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  ensure_installed = {"pyright", "clangd", "tsserver", "lua_ls", "html", "cssls", "tailwindcss", "jsonls", "dockerls", "docker_compose_language_service"},
+  ensure_installed = {"pyright", "clangd", "eslint", "tsserver", "lua_ls", "html", "cssls", "tailwindcss", "jsonls", "dockerls", "docker_compose_language_service"},
   automatic_installation = true,
   handlers = {
     lsp_zero.default_setup
