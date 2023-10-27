@@ -12,8 +12,8 @@ return require('packer').startup(function(use)
   }
   use('nvim-tree/nvim-web-devicons')
 
-  --null-ls
-  use('jose-elias-alvarez/null-ls.nvim')
+  --conform
+  use('stevearc/conform.nvim')
   --prettier
   use('MunifTanjim/prettier.nvim')
 

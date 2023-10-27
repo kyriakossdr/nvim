@@ -104,6 +104,11 @@ _G.packer_plugins = {
     path = "C:\\Users\\kiria\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
+  ["conform.nvim"] = {
+    loaded = true,
+    path = "C:\\Users\\kiria\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\conform.nvim",
+    url = "https://github.com/stevearc/conform.nvim"
+  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "C:\\Users\\kiria\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\friendly-snippets",
@@ -148,11 +153,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "C:\\Users\\kiria\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\neovim-ayu",
     url = "https://github.com/Shatur/neovim-ayu"
-  },
-  ["null-ls.nvim"] = {
-    loaded = true,
-    path = "C:\\Users\\kiria\\AppData\\Local\\nvim-data\\site\\pack\\packer\\start\\null-ls.nvim",
-    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
