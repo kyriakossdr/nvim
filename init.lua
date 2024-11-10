@@ -1,1 +1,1 @@
-require("kiri")
+require("config")
