@@ -1,10 +1,13 @@
 return {
   {"L3MON4D3/LuaSnip", version = "v2.*"},
   {"hrsh7th/cmp-nvim-lsp"},
+  {"hrsh7th/cmp-buffer"},
+  {"onsails/lspkind-nvim"},
   {
     "hrsh7th/nvim-cmp",
     config = function()
       local cmp = require("cmp")
+      local lspkind = require("lspkind")
 
       cmp.setup({
         snippet = {
@@ -15,7 +18,6 @@ return {
         mapping = cmp.mapping.preset.insert({
           ['<C-b>'] = cmp.mapping.scroll_docs(-4),
           ['<C-f>'] = cmp.mapping.scroll_docs(4),
-          ['<C-Space>'] = cmp.mapping.complete(),
           ['<C-e>'] = cmp.mapping.close(),
           ['<C-p>'] = cmp.mapping.select_prev_item({behavior = cmp.SelectBehavior.Select }),
           ['<C-n>'] = cmp.mapping.select_next_item({behavior = cmp.SelectBehavior.Select }),
@@ -31,6 +33,10 @@ return {
           { name = 'nvim_lsp' },
           { name = 'buffer' },
         }),
+
+        formatting = {
+          format = lspkind.cmp_format({ with_text = false, maxwidth = 40 })
+        }
       })
     end
   }
