@@ -2,23 +2,9 @@ return {
   {"neovim/nvim-lspconfig"},
   {"williamboman/mason.nvim"},
   {"williamboman/mason-lspconfig.nvim"},
-  {"glepnir/lspsaga.nvim"},
   {
-    "VonHeikemen/lsp-zero.nvim",
-    branch = 'v4.x',
+    "glepnir/lspsaga.nvim",
     config = function()
-      local lsp_attach = function(_, bufnr)
-        local opts = { buffer = bufnr, remap = false, silent = true }
-
-        vim.keymap.set('n', '<C-j>', '<Cmd>Lspsaga diagnostic_jump_next<CR>', opts)
-        vim.keymap.set('n', 'gd', '<Cmd>Lspsaga lsp_finder<CR>', opts)
-        vim.keymap.set('n', 'K', '<Cmd>Lspsaga show_line_diagnostics<CR>', opts)
-        vim.keymap.set('i', '<C-k>', '<Cmd>Lspsaga signature_help<CR>', opts)
-        vim.keymap.set('n', 'gp', '<Cmd>Lspsaga preview_definition<CR>', opts)
-        vim.keymap.set('n', 'gr', '<Cmd>Lspsaga rename<CR>', opts)
-      end
-
-      local lsp_zero = require("lsp-zero")
       require('lspsaga').setup({
         lightbulb = {
           enable = false,
@@ -26,6 +12,24 @@ return {
           virtual_text = false,
         }
       })
+    end
+  },
+  {
+    "VonHeikemen/lsp-zero.nvim",
+    branch = 'v4.x',
+    config = function()
+      local lsp_attach = function(_, bufnr)
+        local opts = { buffer = bufnr, remap = false, silent = true }
+
+        vim.keymap.set('n', 'gd', '<Cmd>Lspsaga goto_definition<CR>', opts)
+        vim.keymap.set('n', 'K', '<Cmd>Lspsaga hover_doc<CR>', opts)
+        vim.keymap.set('n', 'gp', '<Cmd>Lspsaga peek_definition<CR>', opts)
+        vim.keymap.set('n', 'gr', '<Cmd>Lspsaga rename<CR>', opts)
+        vim.keymap.set('n', 'gf', '<Cmd>Lspsaga finder<CR>', opts)
+        vim.keymap.set('n', '<leader>d', '<Cmd>Lspsaga show_line_diagnostics<CR>', opts)
+      end
+
+      local lsp_zero = require("lsp-zero")
 
       lsp_zero.extend_lspconfig({
         sign_text = true,
