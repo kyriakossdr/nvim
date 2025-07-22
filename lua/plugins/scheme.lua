@@ -15,6 +15,8 @@ return {
         CursorColumn = { bg = "None" },
         WhichKeyFloat = { bg = "None" },
         VertSplit = { bg = "None" },
+        NormalFloat = { bg = "None" },
+        FloatBorder = { bg = "None" }
       }
     })
 
