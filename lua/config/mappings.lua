@@ -12,3 +12,6 @@ vim.keymap.set("v", "<leader>y", "\"+y")
 
 vim.keymap.set({'n','t'}, '<leader>t', '<cmd>Lspsaga term_toggle<CR>')
 
+
+vim.keymap.set("n", "<leader>gg", function () require("neogit").open() end, { desc = "Open Neogit" })
+
