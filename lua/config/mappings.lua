@@ -6,3 +6,6 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
 --yank to the system clipboard
 vim.keymap.set("v", "<leader>y", "\"+y")
+
+vim.keymap.set({'n','t'}, '<leader>t', '<cmd>Lspsaga term_toggle<CR>')
+
