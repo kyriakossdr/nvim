@@ -6,10 +6,12 @@ return {
     "glepnir/lspsaga.nvim",
     config = function()
       require('lspsaga').setup({
+        ui = {
+          title = true
+        },
+
         lightbulb = {
-          enable = false,
-          sign = false,
-          virtual_text = false,
+          enable = false
         }
       })
     end
