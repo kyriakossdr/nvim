@@ -15,3 +15,14 @@ vim.keymap.set({'n','t'}, '<leader>t', '<cmd>Lspsaga term_toggle<CR>')
 
 vim.keymap.set("n", "<leader>gg", function () require("neogit").open() end, { desc = "Open Neogit" })
 
+vim.keymap.set('n', '<leader>dv', function()
+  vim.cmd('vsplit')
+  vim.cmd('wincmd l')  -- focus the new split
+  vim.cmd('Lspsaga goto_definition')
+end, { desc = 'Lspsaga definition in vertical split' })
+
+vim.keymap.set('n', '<leader>dh', function()
+  vim.cmd('split')
+  vim.cmd('wincmd j')  -- focus the new split
+  vim.cmd('Lspsaga goto_definition')
+end, { desc = 'Lspsaga definition in horizontal split' })
