@@ -14,6 +14,12 @@ return {
     },
     config = function ()
       require("noice").setup({
+        views = {
+          hover = { max_width = 60, max_height = 20 },         -- hover docs
+          split = { enter = true, win_options = { wrap = true } },
+          notify = { max_width = 80 },
+        },
+
         lsp = {
           -- override markdown rendering so that **cmp** and other plugins use **Treesitter**
           override = {
@@ -28,17 +34,20 @@ return {
           command_palette = true, -- position the cmdline and popupmenu together
           long_message_to_split = true, -- long messages will be sent to a split
           inc_rename = false, -- enables an input dialog for inc-rename.nvim
-          lsp_doc_border = false, -- add a border to hover docs and signature help
+          lsp_doc_border = true, -- add a border to hover docs and signature help
         },
 
-        opts = function(_, opts)
-          table.insert(opts.routes, {
+        routes = {
+          {
             filter = {
               event = "notify",
               find = "No information available",
             },
             opts = { skip = true },
-          })
+          }
+        },
+
+        opts = function(_, opts)
           local focused = true
           vim.api.nvim_create_autocmd("FocusGained", {
             callback = function()
@@ -77,7 +86,7 @@ return {
   {
     "rcarriga/nvim-notify",
     opts = {
-      timeout = 5000,
+      timeout = 4000,
       background_colour = "#000000",
       render = "minimal",
     },
