@@ -58,7 +58,7 @@ return {
           "dockerls",
           "cssls",
           "tailwindcss",
-          "typescript-language-server",
+          "ts_ls",
           "docker_compose_language_service"
         },
         handlers = {
