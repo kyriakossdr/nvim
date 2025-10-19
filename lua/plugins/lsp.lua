@@ -32,7 +32,6 @@ return {
 
         vim.keymap.set('n', 'gi', '<Cmd>Lspsaga finder imp<CR>', opts)
         vim.keymap.set('n', '<leader>ca', '<Cmd>Lspsaga code_action<CR>', opts)
-        vim.keymap.set('n', '<leader>o', '<Cmd>Lspsaga outline<CR>', opts)
         vim.keymap.set('n', '[d', '<Cmd>Lspsaga diagnostic_jump_prev<CR>', opts)
         vim.keymap.set('n', ']d', '<Cmd>Lspsaga diagnostic_jump_next<CR>', opts)
 

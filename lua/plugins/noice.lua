@@ -88,7 +88,9 @@ return {
     opts = {
       timeout = 4000,
       background_colour = "#000000",
-      render = "minimal",
+      animation = "fade_in_slide_out",
+      render = "wrapped-compact",
+      top_down = false,
     },
   },
 }
