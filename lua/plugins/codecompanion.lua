@@ -22,7 +22,7 @@ return {
             model = "gpt-4o-mini",
             keymaps = {
               send = {
-                modes = { n = "<leader>cs", i = "<leader>cs" },
+                modes = { n = "<leader>cs" },
                 opts = {}
               }
             }
