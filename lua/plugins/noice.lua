@@ -10,7 +10,7 @@ return {
     config = function ()
       require("noice").setup({
         views = {
-          hover = { max_width = 60, max_height = 20 },
+          hover = { border = { style = "rounded" }, max_width = 100, max_height = 70, win_options = { wrap = true } },
           split = { enter = true, win_options = { wrap = true } },
           notify = { max_width = 80 },
         },
