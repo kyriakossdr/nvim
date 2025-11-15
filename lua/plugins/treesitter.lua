@@ -1,12 +1,14 @@
 return {
   {
     "nvim-treesitter/nvim-treesitter",
-    dependencies = {
-      "windwp/nvim-ts-autotag",
-    },
+    build = function ()
+      require("nvim-treesitter.install").update({ with_sync = true })
+    end,
+    event = { "BufEnter" },
     config = function()
-      require("nvim-treesitter.configs").setup({
-        ensure_installed = {"cpp", "javascript", "typescript", "tsx", "json", "markdown", "python", "css", "html", "go", "lua" },
+      require("nvim-treesitter").setup({
+
+        ensure_installed = {"bash", "javascript", "typescript", "tsx", "json", "markdown", "python", "css", "html", "go", "lua" },
 
         sync_install = false,
 
@@ -18,10 +20,34 @@ return {
 
         highlight = {
           enable = true,
+        },
 
-          additional_vim_regex_highlighting = false,
+        autopairs = {
+          enable = true,
+        },
+
+        autotag = {
+          enable = true,
         },
       })
     end
   },
+  {
+		-- Additional text objects for treesitter
+		"nvim-treesitter/nvim-treesitter-textobjects",
+		dependencies = { "nvim-treesitter/nvim-treesitter" },
+	},
+	{
+		"nvim-treesitter/nvim-treesitter-context",
+		dependencies = { "nvim-treesitter/nvim-treesitter" },
+		config = function()
+			local tsc = require("treesitter-context")
+
+			tsc.setup({
+				enable = false,
+				max_lines = 1,
+				trim_scope = "inner",
+			})
+		end,
+	},
 }

@@ -69,13 +69,6 @@ return {
         end,
       })
 
-      -- Monochrome colors for Noice
-      vim.api.nvim_set_hl(0, "NoicePopupmenu", { bg = "none", fg = "#dcdcdc" })
-      vim.api.nvim_set_hl(0, "NoicePopupmenuBorder", { fg = "#444444" })
-      vim.api.nvim_set_hl(0, "NoiceCmdlinePopup", { bg = "none", fg = "#dcdcdc" })
-      vim.api.nvim_set_hl(0, "NoiceCmdlinePopupBorder", { fg = "#444444" })
-      vim.api.nvim_set_hl(0, "NoiceCmdlineIcon", { fg = "#888888" })
-      vim.api.nvim_set_hl(0, "NoiceCmdline", { bg = "none" })
     end
   },
   {
@@ -89,14 +82,6 @@ return {
     },
     config = function(_, opts)
       require("notify").setup(opts)
-
-      -- Monochrome colors for notifications
-      vim.api.nvim_set_hl(0, "NotifyERRORBorder", { fg = "#606060" })
-      vim.api.nvim_set_hl(0, "NotifyWARNBorder", { fg = "#888888" })
-      vim.api.nvim_set_hl(0, "NotifyINFOBorder", { fg = "#a0a0a0" })
-      vim.api.nvim_set_hl(0, "NotifyERRORIcon", { fg = "#888888" })
-      vim.api.nvim_set_hl(0, "NotifyWARNIcon", { fg = "#999999" })
-      vim.api.nvim_set_hl(0, "NotifyINFOIcon", { fg = "#a0a0a0" })
     end,
   },
 }
