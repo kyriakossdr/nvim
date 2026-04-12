@@ -1,5 +1,18 @@
 return {
 	{
+		"akinsho/toggleterm.nvim",
+		version = "*",
+		opts = {
+			direction = "vertical",
+			size = 65,
+			on_open = function()
+				require("nvim-tree.api").tree.close()
+			end,
+			open_mapping = [[<c-\>]],
+		},
+	},
+
+	{
 		"MeanderingProgrammer/render-markdown.nvim",
 		dependencies = { "nvim-treesitter/nvim-treesitter", "nvim-tree/nvim-web-devicons" },
 		opts = {
@@ -29,6 +42,7 @@ return {
 			heading = { enabled = false },
 		},
 	},
+
 	{
 		"goolord/alpha-nvim",
 		dependencies = { "nvim-mini/mini.icons" },
