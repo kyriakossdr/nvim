@@ -93,6 +93,17 @@ return {
 					},
 				},
 			},
+			gopls = {
+				settings = {
+					gopls = {
+						analyses = {
+							unusedparams = true,
+						},
+						staticcheck = true,
+						gofumpt = true,
+					},
+				},
+			},
 		}
 
 		local ensure_installed = vim.tbl_keys(servers or {})
