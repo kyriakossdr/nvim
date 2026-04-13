@@ -31,7 +31,7 @@ return {
 			},
 		})
 
-		vim.keymap.set("n", "<C-h>", nvimTreeFocusOrToggle)
+		vim.keymap.set("n", "<C-b>", nvimTreeFocusOrToggle)
 		vim.keymap.set("n", "?", api.tree.toggle_help, { noremap = true, silent = true, nowait = true })
 
 		-- automatically resize the floating window when neovim's window size changes
