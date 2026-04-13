@@ -16,18 +16,55 @@ return {
 		end
 
 		tree.setup({
+			select_prompts = true,
 			sort = {
 				sorter = "case_sensitive",
 			},
 			view = {
-				width = 30,
+				adaptive_size = false,
+				width = 34,
 				side = "right",
 			},
 			renderer = {
 				group_empty = true,
+				highlight_git = true,
+				highlight_diagnostics = true,
+				icons = {
+					webdev_colors = false,
+					git_placement = "after",
+					modified_placement = "after",
+					show = {
+						file = true,
+						folder = true,
+						folder_arrow = false,
+						git = true,
+					},
+					glyphs = {
+						git = {
+							unstaged = "U",
+							staged = "A",
+							unmerged = "M",
+							renamed = "R",
+							untracked = "?",
+							deleted = "D",
+							ignored = "!",
+						},
+					},
+				},
 			},
 			filters = {
-				dotfiles = true,
+				dotfiles = false,
+				git_ignored = false,
+			},
+			log = {
+				enable = true,
+				types = {
+					git = true,
+				},
+			},
+			diagnostics = {
+				enable = true,
+				show_on_dirs = false,
 			},
 		})
 
