@@ -6,6 +6,8 @@ return {
 		local ts = require("nvim-treesitter")
 
 		ts.install({
+			"yaml",
+			"go",
 			"lua",
 			"javascript",
 			"typescript",
