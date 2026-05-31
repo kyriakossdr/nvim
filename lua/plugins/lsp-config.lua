@@ -52,18 +52,7 @@ return {
 		local servers = {
 			ts_ls = {},
 			ruff = {},
-			pyright = {
-				settings = {
-					pyright = {
-						disableOrganizedImports = true,
-					},
-					python = {
-						analysis = {
-							ignore = { "*" },
-						},
-					},
-				},
-			},
+			ty = {},
 			html = {},
 			cssls = {},
 			tailwindcss = {},
