@@ -72,9 +72,15 @@ return {
 	},
 
 	{
-		"benomahony/uv.nvim",
+		"linux-cultist/venv-selector.nvim",
+		dependencies = {
+			{ "nvim-telescope/telescope.nvim", version = "*", dependencies = { "nvim-lua/plenary.nvim" } },
+		},
+		ft = "python",
+		keys = { { ",v", "<cmd>VenvSelect<cr>" } },
 		opts = {
-			picker_integration = true,
+			options = {},
+			search = {},
 		},
 	},
 
