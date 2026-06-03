@@ -20,5 +20,11 @@ return {
 			"markdown",
 			"markdown_inline",
 		})
+
+		ts.setup({
+			autotag = {
+				enable = true,
+			},
+		})
 	end,
 }

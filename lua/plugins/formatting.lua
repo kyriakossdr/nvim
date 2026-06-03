@@ -22,7 +22,18 @@ return {
 
 		local sources = {
 			-- TODO: use biome instead of prettier
-			formatting.prettier.with({ filetypes = { "html", "json", "yaml", "markdown" } }),
+			formatting.prettier.with({
+				filetypes = {
+					"html",
+					"json",
+					"yaml",
+					"markdown",
+					"javascript",
+					"typescript",
+					"javacriptreact",
+					"typescriptreact",
+				},
+			}),
 			formatting.stylua,
 			formatting.terraform_fmt,
 			require("none-ls.formatting.ruff").with({ extra_args = { "--extend-select", "I" } }),
