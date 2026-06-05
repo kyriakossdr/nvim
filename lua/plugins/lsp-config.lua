@@ -55,7 +55,6 @@ return {
 			ty = {},
 			html = {},
 			cssls = {},
-			tailwindcss = {},
 			dockerls = {},
 			sqlls = {},
 			terraformls = {},

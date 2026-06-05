@@ -24,6 +24,7 @@ return {
 			-- TODO: use biome instead of prettier
 			formatting.prettier.with({
 				filetypes = {
+					"css",
 					"html",
 					"json",
 					"yaml",
