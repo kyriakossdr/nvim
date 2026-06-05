@@ -22,7 +22,7 @@ return {
 			},
 			view = {
 				adaptive_size = false,
-				width = 34,
+				width = 24,
 				side = "right",
 			},
 			renderer = {
